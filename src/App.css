@@ -1,5 +1,4 @@
 .App {
   text-align: center;
-  background-image: url(/backgroundImg.jpg);
-  background-size: contain;
+  min-height: 780px;
 }

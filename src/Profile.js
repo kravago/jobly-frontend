@@ -1,6 +1,8 @@
 import React, {useState, useContext} from 'react';
 import JoblyApi from './api';
 import userContext from './userContext';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function Profile() {
   const {userInfo, currentUser} = useContext(userContext);
@@ -28,8 +30,8 @@ function Profile() {
     return (
       <>
         <h1>Profile page</h1>
-        <form onSubmit={handleSubmit}>
-          <input
+        <Form onSubmit={handleSubmit}>
+          <Form.Control
             name="firstName"
             id="firstName"
             type="text"
@@ -37,7 +39,7 @@ function Profile() {
             onChange={handleChange}
             value={formData.firstName}
           />
-          <input
+          <Form.Control
             name="lastName"
             id="lastName"
             type="text"
@@ -45,7 +47,7 @@ function Profile() {
             onChange={handleChange}
             value={formData.lastName}
           />
-          <input
+          <Form.Control
             name="email"
             id="email"
             type="text"
@@ -53,7 +55,7 @@ function Profile() {
             onChange={handleChange}
             value={formData.email}
           />
-          <input
+          <Form.Control
             name="password"
             id="password"
             type="text"
@@ -61,8 +63,8 @@ function Profile() {
             onChange={handleChange}
             value={formData.password}
           />
-          <button>Save</button>
-        </form>
+          <Button type='submit'>Save</Button>
+        </Form>
       </>
     )
   }

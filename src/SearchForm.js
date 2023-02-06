@@ -3,8 +3,6 @@ import {useHistory} from "react-router-dom";
 import JoblyApi from './api';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SearchForm({updateCompanies}) {
@@ -24,7 +22,7 @@ function SearchForm({updateCompanies}) {
     const req = await JoblyApi.getSearchedCompanies(search);
     updateCompanies(req);
     setSearch(INITIAL_STATE);
-    // history.push("/companies");
+    history.push("/companies");
   }
 
   const divStyle = {

@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function SignupForm({register}) {
   const INITIAL_STATE = {
@@ -26,8 +28,8 @@ function SignupForm({register}) {
     return (
       <>
         <h1>Signup page</h1>
-        <form onSubmit={handleSubmit}>
-          <input
+        <Form onSubmit={handleSubmit}>
+          <Form.Control
             name="firstName"
             id="firstName"
             type="text"
@@ -35,7 +37,7 @@ function SignupForm({register}) {
             onChange={handleChange}
             value={formData.firstName}
           />
-          <input
+          <Form.Control
             name="lastName"
             id="lastName"
             type="text"
@@ -43,7 +45,7 @@ function SignupForm({register}) {
             onChange={handleChange}
             value={formData.lastName}
           />
-          <input
+          <Form.Control
             name="email"
             id="email"
             type="text"
@@ -51,7 +53,7 @@ function SignupForm({register}) {
             onChange={handleChange}
             value={formData.email}
           />
-          <input
+          <Form.Control
             name="username"
             id="email"
             type="text"
@@ -59,16 +61,16 @@ function SignupForm({register}) {
             onChange={handleChange}
             value={formData.username}
           />
-          <input
+          <Form.Control
             name="password"
             id="password"
             type="text"
             placeholder="Password"
             onChange={handleChange}
-            value={formData.username}
+            value={formData.password}
           />
-          <button>Sign Up</button>
-        </form>
+          <Button type="submit">Sign Up</Button>
+        </Form>
       </>
     )
   }

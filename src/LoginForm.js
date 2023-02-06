@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function LoginForm({login}) {
   const INITIAL_STATE = {username: "", password: ""}
@@ -19,23 +21,23 @@ function LoginForm({login}) {
     return (
       <>
         <h1>Login page</h1>
-        <form onSubmit={handleSubmit}>
-          <input
+        <Form onSubmit={handleSubmit}>
+          <Form.Control
             name="username"
             type="text"
             placeholder="Username"
             onChange={handleChange}
             value={formData.username}
           />
-          <input
+          <Form.Control
             name="password"
             type="text"
             placeholder="Password"
             onChange={handleChange}
             value={formData.password}
           />
-          <button>Login</button>
-        </form>
+          <Button type="submit">Login</Button>
+        </Form>
       </>
     )
   }
