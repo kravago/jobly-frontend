@@ -24,6 +24,7 @@ function SignupForm({register}) {
     register(formData);
     setFormData(INITIAL_STATE);
     history.push('/');
+    alert("Registration Complete!");
   }
     return (
       <>

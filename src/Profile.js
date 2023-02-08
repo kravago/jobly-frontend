@@ -23,6 +23,7 @@ function Profile() {
     try {
       const res = await JoblyApi.updateUser(formData, currentUser);
       console.log('Update successful!', res);
+      alert("Profile Updated");
     } catch (e) {
       alert(e);
     }

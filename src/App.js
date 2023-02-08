@@ -21,7 +21,7 @@ function App() {
     try {
       const res = await JoblyApi.login(loginFormData);
       setCurrentToken(res.token);
-      console.log("login success", res)
+      console.log("login success")
     } catch (e) {
       alert(e);
       console.error("Problem in login", e)
@@ -37,6 +37,7 @@ function App() {
     setCurrentToken(null);
     setCurrentUser(INITIAL_STATE);
     setUserInfo(USER_INIT_STATE);
+    alert("User logged out");
   }
 
   useEffect(() => {

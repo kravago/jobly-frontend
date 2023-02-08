@@ -17,6 +17,7 @@ function LoginForm({login}) {
     login(formData);
     setFormData(INITIAL_STATE);
     history.push("/");
+    alert("Login Successful!");
   }
     return (
       <>
@@ -31,7 +32,7 @@ function LoginForm({login}) {
           />
           <Form.Control
             name="password"
-            type="text"
+            type="password"
             placeholder="Password"
             onChange={handleChange}
             value={formData.password}
