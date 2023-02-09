@@ -13,7 +13,7 @@ function Routes({ login, register, token }) {
     <div>
       <Switch>
         <Route exact path="/">
-          <Homepage/>
+        {token ? <CompanyList/> : <Redirect to='/login'/>}
         </Route>
         <Route exact path="/companies">
           {token ? <CompanyList/> : <Redirect to='/login'/>}

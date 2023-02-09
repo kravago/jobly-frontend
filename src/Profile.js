@@ -30,7 +30,7 @@ function Profile() {
   }
     return (
       <>
-        <h1>Profile page</h1>
+        <h1 style={{color: 'white'}}>Profile</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Control
             name="firstName"

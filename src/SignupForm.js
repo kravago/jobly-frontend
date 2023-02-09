@@ -28,7 +28,7 @@ function SignupForm({register}) {
   }
     return (
       <>
-        <h1>Signup page</h1>
+        <h1 style={{color: 'white'}}>Signup page</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Control
             name="firstName"

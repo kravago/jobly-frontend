@@ -16,12 +16,12 @@ function LoginForm({login}) {
     e.preventDefault();
     login(formData);
     setFormData(INITIAL_STATE);
-    history.push("/");
+    history.push("/companies");
     alert("Login Successful!");
   }
     return (
       <>
-        <h1>Login page</h1>
+        <h1 style={{color: 'white'}}>Login</h1>
         <Form onSubmit={handleSubmit}>
           <Form.Control
             name="username"
